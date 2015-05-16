@@ -25,7 +25,7 @@ var average = sum / allPrices.length;
 
 var answer = average.toFixed(2);
 
-document.querySelector('#answer1').textContent = "The average price is $" + answer;
+var answer1 = document.querySelector('#answer1').textContent = "The average price is $" + answer;
 
 
 //     <div class="question">
@@ -54,6 +54,10 @@ var titlesPrices = items.map( function (item) {
   return item.price + " " + item.title;
 });
 
+var answer = average.toFixed(2);
+
+document.querySelector('#answer2').textContent = "The average price is $" + answer;
+
 
 //     <div class="question">
 //       <h4>3. Which item has a "GBP" currency code? Display it's name and price.</h4>
@@ -71,7 +75,11 @@ var newItems = items.filter ( function (item) {
 return item.currency_code === "GBP";
 });
 
+newItems[0].price;
 
+var answer3 = newItems[0].title + " £" + newItems[0].price;
+
+document.querySelector('#answer3').textContent = answer3;
 
 //     <div class="question">
 //       <h4>4. Display a list of all items who are made of wood.</h4>
@@ -90,18 +98,26 @@ var allWood = items.map(function(item) {
   return item.title + item.materials;
 });
 
+var answer = average.toFixed(2);
+
+document.querySelector('#answer4').textContent = answer + " is made out of wood.";
+
 //     <div class="question">
 //       <h4>5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.</h4>
 //       <pre id="answer5">Answer 5 Goes Here</pre>
 //     </div>
 
-var answer5 = document.querySelector('#answer5');
+  var answer5 = document.querySelector('#answer5');
 
-answer5.innerText = '';
+  answer5.innerText = '';
 
-items.forEach( function (item) {
-  answer5.appendChild(document.createTextNode(item.price + item.title + '\n'));
-});
+  items.forEach( function (item) {
+    answer5.appendChild(document.createTextNode(item.price + item.title + '\n'));
+  });
+
+  var answer = average.toFixed(2);
+
+document.querySelector('#answer5').textContent = "The average price is $" + answer;
 
 //     <div class="question">
 //       <h4>6. How many items were made by their sellers?</h4>
@@ -114,4 +130,8 @@ answer6.innerText = '';
 items.forEach( function (item) {
   answer6.appendChild(document.createTextNode(item.price + item.title + '\n'));
 });
+
+var answer = average.toFixed(2);
+
+document.querySelector('#answer6').textContent = "The average price is $" + answer;
 //   </div>
