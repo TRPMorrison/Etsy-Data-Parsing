@@ -77,6 +77,7 @@ items.forEach(function(item) {
     answer3.appendChild(document.createTextNode(item.currency_code + item.title + item.price + '\n'));
 });
 
+
 var newItems = items.filter(function(item) {
     return item.currency_code === "GBP";
 });
@@ -99,26 +100,24 @@ var answer4 = document.querySelector('#answer4');
 answer4.innerText = '';
 
 items.forEach(function(item) {
-    answer4.appendChild(document.createTextNode(item.title + item.materials + '\n'));
+    answer4.appendChild(document.createTextNode(item.materials + '\n'));
 });
 
-
-var allWood = items.map(function(item) {
-    return item.materials + item.title + '\n';
-});
 
 var wood = items.filter(function(item) {
     return item.materials === "wood";
 });
+// var allWood = items.map(function(item) {
+//     return item.materials + item.title + '\n';
+// });
 
-
-function filter(item) {
-    if (item.materials === "wood") {
-        console.log('item.title');
-    } else {
-        console.log('False');
-    }
-};
+// function filter(item) {
+//     if (item.materials === "wood") {
+//         console.log('item.title');
+//     } else {
+//         console.log('False');
+//     }
+// };
 
 // var answer = ;
 
@@ -134,12 +133,15 @@ var answer5 = document.querySelector('#answer5');
 answer5.innerText = '';
 
 items.forEach(function(item) {
-    answer5.appendChild(document.createTextNode(item.price + item.title + '\n'));
+    answer5.appendChild(document.createTextNode(item.materials + '\n'));
 });
+
+
+
 
 var answer = average.toFixed(2);
 
-document.querySelector('#answer5').textContent = "The average price is $" + answer;
+document.querySelector('#answer5').textContent = "blah blah" + answer;
 
 //     <div class="question">
 //       <h4>6. How many items were made by their sellers?</h4>
@@ -150,10 +152,17 @@ var answer6 = document.querySelector('#answer6');
 answer6.innerText = '';
 
 items.forEach(function(item) {
-    answer6.appendChild(document.createTextNode(item.price + item.title + '\n'));
+    answer6.appendChild(document.createTextNode(item.who_made + '\n'));
 });
 
-var answer = average.toFixed(2);
+var sellersItems = items.filter(function(item) {
+    return item.who_made === "i_did";
+});
 
-document.querySelector('#answer6').textContent = "The average price is $" + answer;
+var sellersMade = [sellersItems];
+console.log(sellersMade);
+
+var answer = 18;
+
+document.querySelector('#answer6').textContent = answer;
 //   </div>
