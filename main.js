@@ -89,7 +89,9 @@ answer4.innerText = '';
 items.forEach(function(item) {
     answer4.appendChild(document.createTextNode(item.materials + '\n'));
 });
-
+var woodMaterials = items.filter(function(item) {
+  return item.materials = wood;
+});
 
 var wood = items.filter(function(item) {
     return item.materials === "wood";
@@ -126,9 +128,9 @@ items.forEach(function(item) {
 
 
 
-var answer = average.toFixed(2);
+var answer =
 
-document.querySelector('#answer5').textContent = "blah blah" + answer;
+document.querySelector('#answer5').textContent = "INSERT ANSWER HERE" + answer;
 
 //     <div class="question">
 //       <h4>6. How many items were made by their sellers?</h4>
