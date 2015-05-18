@@ -32,13 +32,6 @@ var answer1 = document.querySelector('#answer1').textContent = "The average pric
 //       <h4>2. Show me an array of items that cost between $14.00 and $18.00 USD?</h4>
 //       <pre id="answer2">Answer 2 Goes Here</pre>
 //     </div>
-function greaterThan(x, y) {
-    if (y > x) {
-        console.log('True');
-    } else {
-        console.log('False');
-    }
-};
 
 var answer2 = document.querySelector('#answer2');
 
@@ -48,21 +41,15 @@ items.forEach(function(item) {
     answer2.appendChild(document.createTextNode(item.price + item.title + '\n'));
 });
 
-var allTitles = items.map(function(item) {
-    return item.title;
+var newItems = items.filter(function(item) {
+    return (item.price >= 14 && item.price <= 18);
 });
 
-var allPrices = items.map(function(item) {
-    return item.price;
-});
+newItems[0].title
 
-var titlesPrices = items.map(function(item) {
-    return item.price + " " + item.title;
-});
+var answer = newItems[0].title + " " + newItems[0].price + '\n';
 
-var answer = average.toFixed(2);
-
-document.querySelector('#answer2').textContent = "The average price is $" + answer;
+// document.querySelector('#answer2').textContent = answer;
 
 
 //     <div class="question">
