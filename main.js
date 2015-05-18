@@ -90,7 +90,7 @@ items.forEach(function(item) {
     answer4.appendChild(document.createTextNode(item.materials + '\n'));
 });
 var woodMaterials = items.filter(function(item) {
-  return item.materials = wood;
+    return item.materials = wood;
 });
 
 var wood = items.filter(function(item) {
@@ -130,7 +130,7 @@ items.forEach(function(item) {
 
 var answer =
 
-document.querySelector('#answer5').textContent = "INSERT ANSWER HERE" + answer;
+    document.querySelector('#answer5').textContent = "INSERT ANSWER HERE" + answer;
 
 //     <div class="question">
 //       <h4>6. How many items were made by their sellers?</h4>
