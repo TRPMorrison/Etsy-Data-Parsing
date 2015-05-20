@@ -128,9 +128,9 @@ items.forEach(function(item) {
 
 
 
-var answer =
+var answer5 =
 
-    document.querySelector('#answer5').textContent = "INSERT ANSWER HERE" + answer;
+    document.querySelector('#answer5').textContent = "INSERT ANSWER HERE" + answer5;
 
 //     <div class="question">
 //       <h4>6. How many items were made by their sellers?</h4>
